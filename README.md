@@ -10,7 +10,7 @@ I'm trying to use the latest version of the frameworks, but that requires manual
 ## Frameworks
 
 * [React + JSX](http://react.jsbin.com/leguxukexe/1/edit?html,js,output) 
-* [Angular 2](http://jsbin.com/xuhujezafo/edit?js,output) 
+* [Angular 2](http://jsbin.com/ziweyeyuye/1/edit?html,js,output) 
 * [Angular 1](http://jsbin.com/runapezipo/edit?html,js,output) (taken from [here](https://gist.github.com/jtrussell/13a772d812053e2e76f8))
 * [Ember](http://emberjs.jsbin.com/?html,css,js,output)
 
