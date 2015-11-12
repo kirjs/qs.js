@@ -17,7 +17,7 @@ I'm trying to use the latest version of the frameworks, but that requires manual
 ## Drawing Libraries
 
 * [d3.js](http://jsbin.com/qelayamela/1/edit?js,output)
-* [processing.js quick start](http://jsbin.com/kayofekuvu/1/edit?js,output)
+* [processing.js](http://jsbin.com/kayofekuvu/1/edit?js,output)
 
 ## Testing 
 
