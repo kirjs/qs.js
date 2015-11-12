@@ -1,0 +1,12 @@
+{
+  "name": "js-quickstart-d3",
+  "version": "1.0.0",
+  "description": "Js quickstart for d3",
+  "main": "d3.js",
+  "keywords": [],
+  "author": "Kirill Cherkashin",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

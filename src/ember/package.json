@@ -1,0 +1,15 @@
+{
+  "name": "js-quickstart-ember",
+  "version": "1.0.0",
+  "description": "Js quickstart for Ember",
+  "main": "ember.js",
+  "keywords": [],
+  "author": "Kirill Cherkashin",
+  "license": "ISC",
+  "jsQuickstart": {
+    "jsbinLink": "http://emberjs.jsbin.com/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

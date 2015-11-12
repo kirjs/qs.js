@@ -1,0 +1,12 @@
+{
+  "name": "js-quickstart-angular2",
+  "version": "1.0.0",
+  "description": "JsBin quickstart for Angular 2",
+  "main": "angular2.js",
+  "keywords": [],
+  "author": "Kirill Cherkashin",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
