@@ -4,11 +4,21 @@
     margin: auto;
 }
 
+.item {
+    padding: 10px;
+}
+
+
+.item:nth-child(2n) {
+    background-color: #ddd;
+}
 .item  div {
     display: inline-block;
 }
 
 .item .framework {
+    font-weight: bold;
+    text-transform: capitalize;
     width: 200px;
 }
 
@@ -18,4 +28,8 @@
 .item .playground a {
     text-decoration: underline;
     color: #400;
+    cursor: pointer;
+}
+.item .playground a:hover {
+    color: #d00;
 }
