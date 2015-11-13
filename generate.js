@@ -23,4 +23,4 @@ var libs = fs.readdirSync(src).reduce(function (result, lib) {
   return result;
 }, {});
 
-fs.writeFileSync('site/src.js', 'var src = ' + JSON.stringify(libs));
+fs.writeFileSync('dist/src.js', 'var src = ' + JSON.stringify(libs));
