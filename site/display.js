@@ -5,10 +5,12 @@ function post(url, data) {
   form.target = "_blank";
   if (data) {
     for (var key in data) {
-      var input = document.createElement("textarea");
-      input.name = key;
-      input.value = typeof data[key] === "object" ? JSON.stringify(data[key]) : data[key];
-      form.appendChild(input);
+      if(data.hasOwnProperty(key)) {
+        var input = document.createElement("textarea");
+        input.name = key;
+        input.value = typeof data[key] === "object" ? JSON.stringify(data[key]) : data[key];
+        form.appendChild(input);
+      }
     }
   }
 
@@ -21,6 +23,7 @@ function post(url, data) {
 function launchCodePen(framework) {
   post('http://codepen.io/pen/define/', {data: src[framework].data});
 }
+
 function launchJsbin(framework) {
   var data = src[framework].data;
   data.javascript = data.js;
@@ -28,12 +31,39 @@ function launchJsbin(framework) {
 }
 
 
+var playgrounds = [
+  {
+    name: 'jsbin',
+    launch: launchJsbin,
+    label: 'JsBin'
+  },
+  {
+    name: 'codepen',
+    launch: launchCodePen,
+    label: 'Codepen'
+  }
+];
+
 var html = '<table>' + Object.keys(src).map(function (framework) {
     var item = src[framework];
-    return '<tr><td>' + framework + '</td>' +
-      '<td><a href = "#" onclick = launchCodePen("' + framework + '")>CodePen</a></td>' +
-      '<td><a href = "#" onclick = launchJsbin("' + framework + '")>JsBin</a></td>' +
-      '</tr>';
+    var result = '<tr><td>' + framework + '</td>';
+    result += playgrounds.map(function (playground, name) {
+      var config = item.config && item.config[playground.name] || {};
+      var result = '<td>';
+
+      if (config.url !== undefined) {
+        if( config.url!==false){
+          result += '<a href = "'+config.url+'" target="_blank">' + playground.label + '</a>';
+        }
+      }
+      else {
+        result += '<a href = "#" onclick = playgrounds["' + name + '"].launch("' + framework + '")>' + playground.label + '</a>';
+      }
+      result += '</td>';
+      return result;
+    }).join('');
+    result += '</tr>';
+    return result;
   }).join('') + '</table>';
 
 document.write(html);

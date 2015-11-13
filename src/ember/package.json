@@ -7,8 +7,12 @@
   "author": "Kirill Cherkashin",
   "license": "ISC",
   "jsQuickstart": {
-    "jsBinLink": "http://emberjs.jsbin.com/",
-    "codePenLink": ""
+    "jsbin": {
+      "url": "http://emberjs.jsbin.com/"
+    },
+    "codepen":{
+      "url": false
+    }
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
