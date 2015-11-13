@@ -94,11 +94,7 @@ function renderItem(item) {
 }
 
 function renderGroup(group, key) {
-
-  return '<div>' +
-    '<h2>' + key + '</h2>' +
-    group.map(renderItem).join('') +
-    '</div>';
+  return '<div><h2>' + key + '</h2>' + group.map(renderItem).join('') + '</div>';
 }
 var html = Object.keys(groups).map(function (key) {
   return renderGroup(groups[key], key);
