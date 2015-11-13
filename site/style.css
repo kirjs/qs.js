@@ -8,10 +8,10 @@
     padding: 10px;
 }
 
-
 .item:nth-child(2n) {
     background-color: #ddd;
 }
+
 .item  div {
     display: inline-block;
 }
