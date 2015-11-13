@@ -21,7 +21,12 @@ function post(url, data) {
 }
 
 function launchCodePen(framework) {
-  post('http://codepen.io/pen/define/', {data: src[framework].data});
+  var data = src[framework].data;
+  if( src[framework].config.codepen && src[framework].config.codepen.js_pre_processor){
+    data.js_pre_processor = src[framework].config.codepen.js_pre_processor;
+  }
+
+  post('http://codepen.io/pen/define/', {data: data});
 }
 
 function launchJsbin(framework) {

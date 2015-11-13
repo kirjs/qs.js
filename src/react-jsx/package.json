@@ -7,7 +7,10 @@
   "author": "Kirill Cherkashin",
   "license": "ISC",
   "jsQuickstart": {
-    "group": "Frameworks"
+    "group": "Frameworks",
+    "codepen": {
+      "js_pre_processor": "babel"
+    }
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

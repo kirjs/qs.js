@@ -15,7 +15,7 @@ var libs = fs.readdirSync(src).reduce(function (result, lib) {
 
   result[lib] = {
     description: info.description,
-    config: info.jsQuickstart,
+    config: info.jsQuickstart || {},
     data: {
       js: getContents('js'),
       html: getContents('html'),
