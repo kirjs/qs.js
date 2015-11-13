@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "Kirill Cherkashin",
   "license": "ISC",
+  "jsQuickstart": {
+    "group": "Frameworks"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }

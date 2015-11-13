@@ -7,6 +7,7 @@
   "author": "Kirill Cherkashin",
   "license": "ISC",
   "jsQuickstart": {
+    "group": "Testing",
     "source": "http://searls.github.io/jasmine-all/"
   },
   "scripts": {

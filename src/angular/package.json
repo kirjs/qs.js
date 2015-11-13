@@ -7,7 +7,8 @@
   "author": "Kirill Cherkashin",
   "license": "ISC",
   "jsQuickstart": {
-    "source": "https://gist.github.com/jtrussell/13a772d812053e2e76f8"
+    "source": "https://gist.github.com/jtrussell/13a772d812053e2e76f8",
+    "group": "Frameworks"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
