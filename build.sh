@@ -13,3 +13,5 @@ mkdir dist
 node generate.js
 cp ./site/* ./dist/
 cd dist
+
+

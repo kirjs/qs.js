@@ -3,9 +3,12 @@
 # This script builds demo and pushes it to gh-pages branch
 #
 
+cd "$(git rev-parse --show-toplevel)"
+set -e
+
 # build
 sh build.sh
-
+cd dist
 
 # deploy
 git init
