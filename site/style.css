@@ -1,0 +1,21 @@
+.wrapper {
+    font-family:sans-serif;
+    width: 600px;
+    margin: auto;
+}
+
+.item  div {
+    display: inline-block;
+}
+
+.item .framework {
+    width: 200px;
+}
+
+.item .playground {
+    width: 100px;
+}
+.item .playground a {
+    text-decoration: underline;
+    color: #400;
+}

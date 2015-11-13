@@ -5,7 +5,7 @@ function post(url, data) {
   form.target = "_blank";
   if (data) {
     for (var key in data) {
-      if(data.hasOwnProperty(key)) {
+      if (data.hasOwnProperty(key)) {
         var input = document.createElement("textarea");
         input.name = key;
         input.value = typeof data[key] === "object" ? JSON.stringify(data[key]) : data[key];
@@ -44,26 +44,59 @@ var playgrounds = [
   }
 ];
 
-var html = '<table>' + Object.keys(src).map(function (framework) {
-    var item = src[framework];
-    var result = '<tr><td>' + framework + '</td>';
-    result += playgrounds.map(function (playground, name) {
-      var config = item.config && item.config[playground.name] || {};
-      var result = '<td>';
-
-      if (config.url !== undefined) {
-        if( config.url!==false){
-          result += '<a href = "'+config.url+'" target="_blank">' + playground.label + '</a>';
-        }
-      }
-      else {
-        result += '<a href = "#" onclick = playgrounds["' + name + '"].launch("' + framework + '")>' + playground.label + '</a>';
-      }
-      result += '</td>';
-      return result;
-    }).join('');
-    result += '</tr>';
+function groupItems(items) {
+  return items.reduce(function (result, item) {
+    var group = item.config.group || 'Other';
+    result[group] = result[group] || [];
+    result[group].push(item);
     return result;
-  }).join('') + '</table>';
+  }, {});
+}
 
-document.write(html);
+function toArray(items) {
+  return Object.keys(items).map(function (key) {
+    var item = items[key];
+    item.key = key;
+    return item;
+  })
+
+}
+
+var groups = groupItems(toArray(src));
+
+
+function renderItem(item) {
+  framework = item.key;
+  var result = '<div class = "item">' +
+    '<div class = "framework">' + framework + '</div>';
+  result += playgrounds.map(function (playground, name) {
+    var config = item.config && item.config[playground.name] || {};
+    var result = '<div class = "playground '+playground.name+'">';
+
+    if (config.url !== undefined) {
+      if (config.url !== false) {
+        result += '<a href = "' + config.url + '" target="_blank">' + playground.label + '</a>';
+      }
+    }
+    else {
+      result += '<a onclick = playgrounds["' + name + '"].launch("' + framework + '")>' + playground.label + '</a>';
+    }
+    result += '</div>';
+    return result;
+  }).join('');
+  result += '</div>';
+  return result;
+}
+
+function renderGroup(group, key) {
+
+  return '<div>' +
+    '<h2>' + key + '</h2>' +
+    group.map(renderItem).join('') +
+    '</div>';
+}
+var html = Object.keys(groups).map(function (key) {
+  return renderGroup(groups[key], key);
+}).join('');
+
+document.getElementById('playgrounds').innerHTML = html;
