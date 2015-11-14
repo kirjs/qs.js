@@ -52,7 +52,7 @@
     transition: all 1s ease;
 }
 
-.item .playground:hover {
+.item .playground a:hover {
     transition: all 1s ease;
     transform: rotate(-12deg) ;
 }
