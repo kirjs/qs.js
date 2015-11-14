@@ -73,7 +73,10 @@ var groups = groupItems(toArray(src));
 function renderItem(item) {
   framework = item.key;
   var result = '<div class = "item">' +
-    '<div class = "framework">' + framework + '</div>';
+    '<div class = "info">' +
+    '<div class="framework">' + framework + '</div>' +
+    '<div class = "author">by ' + item.author + '</div>' +
+    '</div>';
   result += playgrounds.map(function (playground, name) {
     var config = item.config && item.config[playground.name] || {};
     var result = '<div class = "playground '+playground.name+'">';
@@ -87,6 +90,7 @@ function renderItem(item) {
       result += '<a onclick = playgrounds["' + name + '"].launch("' + framework + '")>' + playground.label + '</a>';
     }
     result += '</div>';
+
     return result;
   }).join('');
   result += '</div>';

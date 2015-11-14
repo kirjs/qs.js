@@ -16,10 +16,17 @@
     display: inline-block;
 }
 
-.item .framework {
-    font-weight: bold;
+.item .info {
     text-transform: capitalize;
     width: 200px;
+}
+
+.item .framework {
+    font-weight: bold;
+}
+.item .info .author {
+    font-size: 60%;
+    display: block;
 }
 
 .item .playground {
