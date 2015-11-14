@@ -4,6 +4,8 @@ and libraries ready to go.
 
 This would allow you to start prototyping right away without wasting time on the set up
 
+The cool thing is that all [sources](https://github.com/kirjs/qs.js/tree/master/src) are also on github. 
+
 ## One of the libraries is out of date
 0. Create an [issue](https://github.com/kirjs/qs.js/issues) to let other people know what you're working on
 1. Fix it and create a PR (see [How to add a new library?][# How to add a new library?), but ignore step 3)
