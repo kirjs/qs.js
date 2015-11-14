@@ -1,5 +1,5 @@
 # JSBin Quick Start
-This is the source for qs.js.org, a list of JS playgrounds prepopulated for the most popula frameworks 
+This is the source for [qs.js.org](http://qs.js.org): a list of JS playgrounds pre-populated for the most populal frameworks 
 and libraries ready to go. 
 
 This would allow you to start prototyping right away without wasting time on the set up
