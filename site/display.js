@@ -1,3 +1,4 @@
+var githubSrcLink = "https://github.com/kirjs/qs.js/tree/master/src/";
 function post(url, data) {
   var form = document.createElement("form");
   form.action = url;
@@ -23,7 +24,7 @@ function post(url, data) {
 function launchJsFiddle(framework) {
   var data = src[framework].data;
   data.wrap = 'b';
-  if( src[framework].config.jsfiddle && src[framework].config.jsfiddle.panel_js){
+  if (src[framework].config.jsfiddle && src[framework].config.jsfiddle.panel_js) {
     data.panel_js = src[framework].config.jsfiddle.panel_js;
   }
 
@@ -32,7 +33,7 @@ function launchJsFiddle(framework) {
 
 function launchCodePen(framework) {
   var data = src[framework].data;
-  if( src[framework].config.codepen && src[framework].config.codepen.js_pre_processor){
+  if (src[framework].config.codepen && src[framework].config.codepen.js_pre_processor) {
     data.js_pre_processor = src[framework].config.codepen.js_pre_processor;
   }
 
@@ -94,7 +95,7 @@ function renderItem(item) {
     '</div>';
   result += playgrounds.map(function (playground, name) {
     var config = item.config && item.config[playground.name] || {};
-    var result = '<div class = "playground '+playground.name+'">';
+    var result = '<div class = "playground ' + playground.name + '">';
 
     if (config.url !== undefined) {
       if (config.url !== false) {
@@ -104,10 +105,13 @@ function renderItem(item) {
     else {
       result += '<a onclick = playgrounds["' + name + '"].launch("' + framework + '")>' + playground.label + '</a>';
     }
+
     result += '</div>';
 
     return result;
   }).join('');
+  result += '<div class = "source">' +
+    '<a href = "' + githubSrcLink + framework + '" target="_blank"><img src="GitHub-Mark-32px.png" alt="'+framework+' source on github"></a></div>';
   result += '</div>';
   return result;
 }

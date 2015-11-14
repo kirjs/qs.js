@@ -40,3 +40,7 @@
 .item .playground a:hover {
     color: #d00;
 }
+
+.item .source  {
+    float: right;
+}
