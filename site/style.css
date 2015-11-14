@@ -52,6 +52,12 @@
     transition: all 1s ease;
 }
 
+
+.item .playground:hover {
+    transition: all 1s ease;
+    transform: rotate(-12deg) ;
+
+}
 .item .source img:hover {
     transform: rotate(40deg);
     margin-top: 6px;
