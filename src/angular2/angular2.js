@@ -3,7 +3,7 @@ var List = ng.Component({
   directives: [ng.NgFor],
   template: '<div>Hello, {{hello}}!</div>'
 }).Class({
-  constructor: function(){
+  constructor: function (){
     this.hello = 'world';
   }
 });

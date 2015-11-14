@@ -1,5 +1,5 @@
 var Hello = React.createClass({
-  render: function() {
+  render: function (){
     return (
       <h1>Hello {this.props.name}!</h1>
     );
@@ -7,6 +7,6 @@ var Hello = React.createClass({
 });
 
 ReactDOM.render(
-<Hello name="World" />,
+  <Hello name="World"/>,
   document.getElementById('container')
 );

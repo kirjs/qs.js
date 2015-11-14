@@ -2,7 +2,7 @@
  * How is the next application state calculated,
  * given the current state and the action?
  */
-const counter = (state = 0, action) => {
+const counter = (state = 0, action) =>{
   switch (action.type) {
     case 'INCREMENT':
       return state + 1;
@@ -34,7 +34,7 @@ const Counter = ({
  * Which injected props should be calculated
  * from the application state and how?
  */
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) =>{
   return {
     value: state
   };
@@ -44,14 +44,14 @@ const mapStateToProps = (state) => {
  * Which injected props should be callbacks
  * that dispatch actions, and which actions?
  */
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) =>{
   return {
-    onIncrement: () => {
+    onIncrement: () =>{
       dispatch({
         type: 'INCREMENT'
       })
     },
-    onDecrement: () => {
+    onDecrement: () =>{
       dispatch({
         type: 'DECREMENT'
       })
@@ -82,6 +82,6 @@ const store = createStore(counter);
  * passing the store to it.
  */
 ReactDOM.render(
-  <CounterContainer store={store} />,
+  <CounterContainer store={store}/>,
   document.getElementById('root')
 );

@@ -5,5 +5,9 @@ var circle = svg.selectAll("circle")
   .enter()
   .append("circle")
   .attr("cy", 60)
-  .attr("cx", function(d, i) { return i * 100 + 30; })
-  .attr("r", function(d) { return Math.sqrt(d); });
+  .attr("cx", function (d, i){
+    return i * 100 + 30;
+  })
+  .attr("r", function (d){
+    return Math.sqrt(d);
+  });

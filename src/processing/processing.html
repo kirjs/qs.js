@@ -4,10 +4,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing-api.min.js"></script>
 
     <script>
-        function start(callback, config) {
+        function start(callback, config){
             config = config || {};
 
-            function sketchProc(processing) {
+            function sketchProc(processing){
                 if (config.globals) {
                     for (var i in processing) {
                         if (typeof processing[i] === 'function') {
@@ -17,7 +17,7 @@
                 }
 
                 processing.draw = callback
-                processing.setup = function () {
+                processing.setup = function (){
                     size(500, 500);
                 }
             }
