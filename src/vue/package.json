@@ -1,8 +1,8 @@
 {
-  "name": "js-quickstart-angular",
+  "name": "js-quickstart-vue",
   "version": "1.0.0",
-  "description": "Js quickstart for angular",
-  "main": "angular.js",
+  "description": "Js quickstart for vue",
+  "main": "vue.js",
   "keywords": [],
   "author": "Kirill Cherkashin",
   "license": "ISC",
