@@ -1,5 +1,12 @@
+/**
+ *  I apologize in advance if you have to read it.
+ */
+
+
 var githubSrcLink = "https://github.com/kirjs/qs.js/tree/master/src/";
-function post(url, data) {
+var defaultAuthor = 'Kirill Cherkashin';
+
+function post(url, data){
   var form = document.createElement("form");
   form.action = url;
   form.method = 'Post';
@@ -21,7 +28,7 @@ function post(url, data) {
   form.submit();
 }
 
-function launchJsFiddle(framework) {
+function launchJsFiddle(framework){
   var data = src[framework].data;
   data.wrap = 'b';
   if (src[framework].config.jsfiddle && src[framework].config.jsfiddle.panel_js) {
@@ -31,7 +38,7 @@ function launchJsFiddle(framework) {
   post('http://jsfiddle.net/api/post/library/pure/', data);
 }
 
-function launchCodePen(framework) {
+function launchCodePen(framework){
   var data = src[framework].data;
   if (src[framework].config.codepen && src[framework].config.codepen.js_pre_processor) {
     data.js_pre_processor = src[framework].config.codepen.js_pre_processor;
@@ -40,7 +47,7 @@ function launchCodePen(framework) {
   post('http://codepen.io/pen/define/', {data: data});
 }
 
-function launchJsbin(framework) {
+function launchJsbin(framework){
   var data = src[framework].data;
   data.javascript = data.js;
   post('http://jsbin.com?js,output', data);
@@ -65,8 +72,8 @@ var playgrounds = [
   }
 ];
 
-function groupItems(items) {
-  return items.reduce(function (result, item) {
+function groupItems(items){
+  return items.reduce(function (result, item){
     var group = item.config.group || 'Other';
     result[group] = result[group] || [];
     result[group].push(item);
@@ -74,8 +81,8 @@ function groupItems(items) {
   }, {});
 }
 
-function toArray(items) {
-  return Object.keys(items).map(function (key) {
+function toArray(items){
+  return Object.keys(items).map(function (key){
     var item = items[key];
     item.key = key;
     return item;
@@ -86,14 +93,18 @@ function toArray(items) {
 var groups = groupItems(toArray(src));
 
 
-function renderItem(item) {
+function renderItem(item){
   framework = item.key;
   var result = '<div class = "item">' +
     '<div class = "info">' +
-    '<div class="framework">' + framework + '</div>' +
-    '<div class = "author">by ' + item.author + '</div>' +
-    '</div>';
-  result += playgrounds.map(function (playground, name) {
+    '<div class="framework">' + framework + '</div>';
+
+  if (item.author !== defaultAuthor) {
+    result += '<div class = "author">by ' + item.author + '</div>';
+  }
+
+  result += '</div>';
+  result += playgrounds.map(function (playground, name){
     var config = item.config && item.config[playground.name] || {};
     var result = '<div class = "playground ' + playground.name + '">';
 
@@ -111,15 +122,15 @@ function renderItem(item) {
     return result;
   }).join('');
   result += '<div class = "source">' +
-    '<a href = "' + githubSrcLink + framework + '" target="_blank"><img src="GitHub-Mark-32px.png" alt="'+framework+' source on github"></a></div>';
+    '<a href = "' + githubSrcLink + framework + '" target="_blank"><img src="GitHub-Mark-32px.png" alt="' + framework + ' source on github"></a></div>';
   result += '</div>';
   return result;
 }
 
-function renderGroup(group, key) {
+function renderGroup(group, key){
   return '<div><h2>' + key + '</h2>' + group.map(renderItem).join('') + '</div>';
 }
-var html = Object.keys(groups).map(function (key) {
+var html = Object.keys(groups).map(function (key){
   return renderGroup(groups[key], key);
 }).join('');
 
