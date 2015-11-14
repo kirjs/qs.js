@@ -4,11 +4,11 @@ var path = require('path');
 var src = 'src';
 
 var libs = fs.readdirSync(src).reduce(function (result, lib) {
-  console.log("Processing: " + lib);
+  console.log('Processing: ' + lib);
 
   function getContents(extension) {
     var filePath = path.join(src, lib, lib + '.' + extension);
-    return fs.existsSync(filePath) && fs.readFileSync(filePath, 'UTF-8');
+    return fs.existsSync(filePath) && fs.readFileSync(filePath, 'UTF-8') || '';
   }
 
   var info = JSON.parse(fs.readFileSync(path.join(src, lib, 'package.json')));
