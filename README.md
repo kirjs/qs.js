@@ -1,4 +1,4 @@
-# JSBin Quick Start
+# JS Quick Start
 This is the source for [qs.js.org](http://qs.js.org): a list of JS playgrounds pre-populated for the most populal frameworks 
 and libraries ready to go. 
 

@@ -1,5 +1,5 @@
 {
-  "name": "jsbin-quick-start",
+  "name": "js-quick-start",
   "version": "1.0.0",
   "description": "A list of predefined templates can be used for quick prototyping or to try a framework/library.",
   "main": "post.js",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/kirjs/jsbin-quick-start.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kirill Cherkashin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kirjs/jsbin-quick-start/issues"
