@@ -1,26 +1,27 @@
 # JSBin Quick Start
-A list of predefined templates can be used for quick prototyping or to try a framework/library.
- 
-Generally JSBin would have a simple example set up ready to go, so you won't have to waste time on set up.
+This is the source for qs.js.org, a list of JS playgrounds prepopulated for the most popula frameworks 
+and libraries ready to go. 
 
-I'm trying to use the latest version of the frameworks, but that requires manual updates, so PRs welcome!
+This would allow you to start prototyping right away without wasting time on the set up
 
-# Links
+## How to add a new library?
+0. Create an issue to let other people know what you're working on
+1. `git clone https://github.com/kirjs/qs.js.git && cd js.qs`
+2. Create a `%framework%` folder in `src` folder.
+3. Add `package.json`, `%framework%.html` and `%framework%.js` files.
+4. Run `sh build.sh` 
+5. `open dist/index.html`
+6. You'll see your new framework on the web page. 
+7. Don't forget to run `sh build.sh` for every change. 
+8. Make sure it works for all playgrounds. 
+9. Create a PR
 
-## Frameworks
-
-* [React + JSX](http://react.jsbin.com/leguxukexe/1/edit?html,js,output)
-* [React + Redux](https://jsbin.com/kuzogejuho/edit?html,js,output) (taken from [here](https://twitter.com/dan_abramov/status/663002368976560129))
-* [Angular 2](http://jsbin.com/ziweyeyuye/1/edit?html,js,output) 
-* [Angular 1](http://jsbin.com/runapezipo/edit?html,js,output) (taken from [here](https://gist.github.com/jtrussell/13a772d812053e2e76f8))
-* [Ember](http://emberjs.jsbin.com/?html,css,js,output)
-
-## Drawing Libraries
-
-* [d3.js](http://jsbin.com/qelayamela/1/edit?js,output)
-* [processing.js](http://jsbin.com/kayofekuvu/1/edit?js,output)
-
-## Testing 
-
-* [Jasmine](http://jsbin.com/lixacuvojo/1/edit?html,js,output) (taken from [here](http://searls.github.io/jasmine-all/))
-* [Mocha + Chai](http://jsbin.com/silixerexi/1/edit?js,output)
+## How to add a new playground 
+0. Create an issue to let other people know what you're working on
+1. `git clone https://github.com/kirjs/qs.js.git && cd js.qs`
+2.  Run `sh build.sh`
+3. `open dist/index.html`
+4. Start modifying `display.js` (find the p
+5. Don't forget to run `sh build.sh` for every change. 
+6. Make sure it works for all libraries
+7. Create a PR
