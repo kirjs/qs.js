@@ -6,6 +6,10 @@
 var githubSrcLink = "https://github.com/kirjs/qs.js/tree/master/src/";
 var defaultAuthor = 'Kirill Cherkashin';
 
+window.addEventListener("load", function() {
+  document.body.setAttribute("class","loaded");
+});
+
 function post(url, data){
   var form = document.createElement("form");
   form.action = url;
