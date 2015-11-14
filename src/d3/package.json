@@ -7,7 +7,7 @@
   "author": "Kirill Cherkashin",
   "license": "ISC",
   "jsQuickstart": {
-    "group": "Drawing Libraries"
+    "group": "Drawing/Charting Libraries"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

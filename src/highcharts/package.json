@@ -1,8 +1,8 @@
 {
-  "name": "js-quickstart-c3",
+  "name": "js-quickstart-highcharts",
   "version": "1.0.0",
-  "description": "Js quickstart for c3",
-  "main": "c3.js",
+  "description": "Js quickstart for highcharts",
+  "main": "highcharts.js",
   "keywords": [],
   "author": "Kirill Cherkashin",
   "license": "ISC",
