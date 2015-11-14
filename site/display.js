@@ -20,6 +20,16 @@ function post(url, data) {
   form.submit();
 }
 
+function launchJsFiddle(framework) {
+  var data = src[framework].data;
+  data.wrap = 'b';
+  if( src[framework].config.jsfiddle && src[framework].config.jsfiddle.panel_js){
+    data.panel_js = src[framework].config.jsfiddle.panel_js;
+  }
+
+  post('http://jsfiddle.net/api/post/library/pure/', data);
+}
+
 function launchCodePen(framework) {
   var data = src[framework].data;
   if( src[framework].config.codepen && src[framework].config.codepen.js_pre_processor){
@@ -46,6 +56,11 @@ var playgrounds = [
     name: 'codepen',
     launch: launchCodePen,
     label: 'Codepen'
+  },
+  {
+    name: 'jsfiddle',
+    launch: launchJsFiddle,
+    label: 'JsFiddle'
   }
 ];
 

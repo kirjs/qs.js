@@ -10,6 +10,9 @@
     "group": "Frameworks",
     "codepen": {
       "js_pre_processor": "babel"
+    },
+    "jsfiddle": {
+      "panel_js": "3"
     }
   },
   "scripts": {

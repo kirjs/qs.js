@@ -11,7 +11,11 @@
     "group": "Frameworks",
     "codepen": {
       "js_pre_processor": "babel"
+    },
+    "jsfiddle": {
+      "panel_js": "3"
     }
+
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
