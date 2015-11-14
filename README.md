@@ -4,8 +4,17 @@ and libraries ready to go.
 
 This would allow you to start prototyping right away without wasting time on the set up
 
+## One of the libraries is out of date
+0. Create an [issue](https://github.com/kirjs/qs.js/issues) to let other people know what you're working on
+1. Fix it and create a PR (see [How to add a new library?][# How to add a new library?), but ignore step 3)
+
+## Something doesn't work
+0. Create an [issue](https://github.com/kirjs/qs.js/issues) to let other people know what you're working on
+1. Fix it and create a PR (see [How to add a new library?][# How to add a new library?), but ignore step 3)
+ 
+
 ## How to add a new library?
-0. Create an issue to let other people know what you're working on
+0. Create an [issue](https://github.com/kirjs/qs.js/issues) to let other people know what you're working on
 1. `git clone https://github.com/kirjs/qs.js.git && cd js.qs`
 2. Create a `%framework%` folder in `src` folder.
 3. Add `package.json`, `%framework%.html` and `%framework%.js` files.
@@ -17,7 +26,7 @@ This would allow you to start prototyping right away without wasting time on the
 9. Create a PR
 
 ## How to add a new playground 
-0. Create an issue to let other people know what you're working on
+0. Create an [issue](https://github.com/kirjs/qs.js/issues) to let other people know what you're working on
 1. `git clone https://github.com/kirjs/qs.js.git && cd js.qs`
 2.  Run `sh build.sh`
 3. `open dist/index.html`
