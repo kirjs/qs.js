@@ -1,0 +1,15 @@
+{
+  "name": "js-quickstart-c3",
+  "version": "1.0.0",
+  "description": "Js quickstart for c3",
+  "main": "c3.js",
+  "keywords": [],
+  "author": "Kirill Cherkashin",
+  "license": "ISC",
+  "jsQuickstart": {
+    "group": "Drawing Libraries"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
