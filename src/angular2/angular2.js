@@ -1,6 +1,5 @@
 var List = ng.Component({
-  selector: 'list',
-  directives: [ng.NgFor],
+  selector: 'app',
   template: '<div>Hello, {{hello}}!</div>'
 }).Class({
   constructor: function (){
