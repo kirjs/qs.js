@@ -1,0 +1,49 @@
+.wrapper {
+    font-family:sans-serif;
+    width: 400px;
+    margin: auto;
+    box-shadow: 0  0 10px #888;
+    border: 1px #ddd solid;
+    margin-top: 40px;
+}
+
+.header {
+    background-color: #666;
+    padding: 16px;
+}
+
+.header a {
+    color: #fd9;
+    text-decoration: none;
+}
+
+.header div {
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.launcher {
+    padding: 15px;
+}
+
+
+.launch {
+    width: 100%;
+    border: 1px solid #000;
+    background-color: #fd9;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0  0 2px #999;
+}
+
+.launch:hover {
+
+
+    background-color: #000;
+    color: #fd9;
+    box-shadow: 0  0 4px #fd0;
+}

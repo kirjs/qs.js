@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/kirjs/jsbin-quick-start/issues"
   },
-  "homepage": "https://github.com/kirjs/jsbin-quick-start#readme"
+  "babel": {
+    "presets": ["react", "es2015"]
+  },
+  "homepage": "https://github.com/kirjs/jsbin-quick-start#readme",
+  "devDependencies": {
+    "react": "^0.14.3"
+  }
 }

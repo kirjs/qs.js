@@ -32,7 +32,7 @@ The cool thing is that all [sources](https://github.com/kirjs/qs.js/tree/master/
 1. `git clone https://github.com/kirjs/qs.js.git && cd js.qs`
 2.  Run `sh build.sh`
 3. `open dist/index.html`
-4. Start modifying `display.js` (find the p
+4. Start modifying `site/launch.js` (find the p
 5. Don't forget to run `sh build.sh` for every change. 
 6. Make sure it works for all libraries
 7. Create a PR

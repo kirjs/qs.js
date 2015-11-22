@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# This script builds demo and pushes it to gh-pages branch
+# This script builds demo and push it to gh-pages branch
 #
 
 # clean up
@@ -10,8 +10,8 @@ rm -rf dist || exit 0;
 mkdir dist
 
 # build
-node generate.js
 cp ./site/* ./dist/
+babel-node site-src/main.js
 cd dist
 
 
