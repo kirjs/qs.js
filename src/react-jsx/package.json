@@ -1,22 +1,14 @@
 {
   "name": "js-quickstart-react-jsx",
   "version": "1.0.0",
-  "description": "QS Quickstart for React + JSX",
+  "description": "JS Quickstart for React + JSX",
   "main": "react-jsx.js",
   "keywords": [],
   "author": "Kirill Cherkashin",
   "license": "ISC",
   "jsQuickstart": {
     "group": "Frameworks",
-    "codepen": {
-      "js_pre_processor": "babel"
-    },
-    "jsbin": {
-       "processor": "jsx"
-    },
-    "jsfiddle": {
-      "panel_js": "3"
-    }
+    "jsPreprocessor": "jsx"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

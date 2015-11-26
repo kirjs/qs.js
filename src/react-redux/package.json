@@ -9,15 +9,7 @@
   "jsQuickstart": {
     "source": "https://twitter.com/dan_abramov/status/663002368976560129",
     "group": "Frameworks",
-    "codepen": {
-      "js_pre_processor": "babel"
-    },
-    "jsbin": {
-      "processor": "jsx"
-    },
-    "jsfiddle": {
-      "panel_js": "3"
-    }
+    "jsPreprocessor": "jsx"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -22,16 +22,24 @@ var launchers = {
   jsfiddle: function (framework){
     var data = framework.data;
     data.wrap = 'b';
-    if (framework.config.jsfiddle && framework.config.jsfiddle.panel_js) {
-      data.panel_js = framework.config.jsfiddle.panel_js;
+    var jsPreprocessorMap = {
+      jsx: 3
+    };
+
+    if (config.jsPreprocessor) {
+      data.panel_js = jsPreprocessorMap[framework.config.jsPreprocessor];
     }
 
     post('http://jsfiddle.net/api/post/library/pure/', data);
   },
   codepen: function (framework){
+    var jsPreprocessorMap = {
+      jsx: 'babel'
+    };
     var data = framework.data;
-    if (framework.config.codepen && framework.config.codepen.js_pre_processor) {
-      data.js_pre_processor = framework.config.codepen.js_pre_processor;
+
+    if (framework.config.jsPreprocessor) {
+      data.js_pre_processor = jsPreprocessorMap[framework.config.jsPreprocessor];
     }
 
     post('http://codepen.io/pen/define/', {data: data});
@@ -40,8 +48,8 @@ var launchers = {
   jsbin: function (framework){
     var data = framework.data;
 
-    if(framework.config.jsbin && framework.config.jsbin.processor){
-      data[framework.config.jsbin.processor] = data.js;
+    if (framework.config.jsPreprocessor) {
+      data[framework.config.jsPreprocessor] = data.js;
       delete data.js;
     }
 
