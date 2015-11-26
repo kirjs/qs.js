@@ -1,7 +1,7 @@
 {
   "name": "js-quickstart-jasmine",
   "version": "1.0.0",
-  "description": "Js quickstart for Jasmine",
+  "description": "qs.js.org quickstart template for Jasmine",
   "main": "jasmine.js",
   "keywords": [],
   "author": "Kirill Cherkashin",

@@ -1,7 +1,7 @@
 {
   "name": "js-quickstart-ractive",
   "version": "1.0.0",
-  "description": "Js quickstart for ractive",
+  "description": "qs.js.org quickstart template for Ractive",
   "main": "ractive.js",
   "keywords": [],
   "author": "Brett Shwom",

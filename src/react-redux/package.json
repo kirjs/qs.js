@@ -1,7 +1,7 @@
 {
   "name": "js-quickstart-react-redux",
   "version": "1.0.0",
-  "description": "Js quickstart for React + Redux",
+  "description": "qs.js.org quickstart template for Redux + React",
   "main": "react-redux.js",
   "keywords": [],
   "author": "Kirill Cherkashin",

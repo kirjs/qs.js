@@ -1,7 +1,7 @@
 {
   "name": "js-quickstart-react-jsx",
   "version": "1.0.0",
-  "description": "JS Quickstart for React + JSX",
+  "description": "qs.js.org quickstart template for React + JSX",
   "main": "react-jsx.js",
   "keywords": [],
   "author": "Kirill Cherkashin",

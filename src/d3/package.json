@@ -1,7 +1,7 @@
 {
   "name": "js-quickstart-d3",
   "version": "1.0.0",
-  "description": "Js quickstart for d3",
+  "description": "qs.js.org quickstart template for d3",
   "main": "d3.js",
   "keywords": [],
   "author": "Kirill Cherkashin",
