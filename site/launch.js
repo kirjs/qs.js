@@ -39,7 +39,12 @@ var launchers = {
 
   jsbin: function (framework){
     var data = framework.data;
-    data.javascript = data.js;
+
+    if(framework.config.jsbin && framework.config.jsbin.processor){
+      data[framework.config.jsbin.processor] = data.js;
+      delete data.js;
+    }
+
     post('http://jsbin.com?js,output', data);
   }
 };

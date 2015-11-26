@@ -11,6 +11,9 @@
     "codepen": {
       "js_pre_processor": "babel"
     },
+    "jsbin": {
+       "processor": "jsx"
+    },
     "jsfiddle": {
       "panel_js": "3"
     }
