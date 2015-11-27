@@ -1,0 +1,16 @@
+{
+  "name": "js-quickstart-cycle",
+  "version": "1.0.0",
+  "description": "qs.js.org quickstart template for Cycle",
+  "main": "cycle.js",
+  "keywords": [],
+  "author": "Kirill Cherkashin",
+  "license": "ISC",
+  "jsQuickstart": {
+    "jsPreprocessor": "es6",
+    "group": "Frameworks"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

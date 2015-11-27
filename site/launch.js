@@ -23,10 +23,11 @@ var launchers = {
     var data = framework.data;
     data.wrap = 'b';
     var jsPreprocessorMap = {
-      jsx: 3
+      jsx: 3,
+      es6: 3
     };
 
-    if (config.jsPreprocessor) {
+    if (framework.config.jsPreprocessor) {
       data.panel_js = jsPreprocessorMap[framework.config.jsPreprocessor];
     }
 
@@ -34,8 +35,10 @@ var launchers = {
   },
   codepen: function (framework){
     var jsPreprocessorMap = {
-      jsx: 'babel'
+      jsx: 'babel',
+      es6: 'babel'
     };
+
     var data = framework.data;
 
     if (framework.config.jsPreprocessor) {
