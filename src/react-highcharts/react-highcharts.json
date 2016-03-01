@@ -1,0 +1,16 @@
+{
+  "name": "js-quickstart-react-highcharts",
+  "version": "1.0.0",
+  "description": "qs.js.org quickstart template for React-highcharts",
+  "main": "ractive.js",
+  "keywords": [],
+  "author": "Kirill Cherkashin",
+  "license": "ISC",
+  "jsQuickstart": {
+    "group": "Drawing/Charting Libraries",
+    "jsPreprocessor": "jsx"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
