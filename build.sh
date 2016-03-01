@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# This script builds demo and push it to gh-pages branch
+# This script builds the site
 #
 
 # clean up
