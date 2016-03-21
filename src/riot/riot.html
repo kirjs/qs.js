@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/riot/2.3/riot+compiler.min.js"></script>
+    <meta charset="utf-8">
+    <title>Riot.js started with qs.js.org</title>
+</head>
+<body>
+    <riot-component></riot-component>
+
+    <script type="riot/tag">
+        <riot-component>
+            <h1>hello {username}</h1>
+            <p>you tasks:</p>
+            <ul>
+                <li each="{ task in tasks }">{task.title}</li>
+            </ul>
+
+            var tag = this
+
+            tag.username = opts.username
+            tag.tasks = opts.tasks
+        </riot-component>
+    </script>
+</body>
+</html>
