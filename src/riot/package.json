@@ -1,0 +1,15 @@
+{
+  "name": "js-quickstart-riot",
+  "version": "1.0.0",
+  "description": "qs.js.org quickstart template for Riot.js",
+  "main": "riot.js",
+  "keywords": [],
+  "author": "Roman Akhmadullin",
+  "license": "ISC",
+  "jsQuickstart": {
+    "group": "Frameworks"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
