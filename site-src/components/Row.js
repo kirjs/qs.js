@@ -22,7 +22,8 @@ module.exports = (props) =>{
     </div>
   });
 
-  return <div className='item'>
+
+  return <div className={item.key + ' item'}>
     <div className='info'>
       <div className='framework'>{item.key}</div>
       {author}
