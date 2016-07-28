@@ -4,6 +4,6 @@ c3.generate({
     type: 'donut'
   },
   donut: {
-    title: "title:"
+    title: "Hello, World!"
   }
 });

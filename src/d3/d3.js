@@ -1,13 +1,9 @@
 var svg = d3.select("svg");
 
-var circle = svg.selectAll("circle")
-  .data([32, 57, 112, 293])
+var circle = svg.selectAll("text")
+  .data(['Hello, World!'])
   .enter()
-  .append("circle")
-  .attr("cy", 60)
-  .attr("cx", function (d, i){
-    return i * 100 + 30;
-  })
-  .attr("r", function (d){
-    return Math.sqrt(d);
-  });
+  .append("text")
+  .attr("dx", 10)
+  .attr("dy", 10)
+  .text(a=>a);
