@@ -1,9 +1,9 @@
 var List = ng.Component({
   selector: 'app',
-  template: '<div>Hello, {{hello}}!</div>'
+  template: '<h1>Hello, {{hello}}!</h1>'
 }).Class({
   constructor: function (){
-    this.hello = 'world';
+    this.hello = 'World';
   }
 });
 
