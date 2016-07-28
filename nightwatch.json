@@ -1,0 +1,12 @@
+{
+  "src_folders": [
+    "tests/e2e"
+  ],
+
+  "test_settings": {
+    "default": {
+      "waitForConditionTimeout": 1000,
+      "launch_url": "http://127.0.0.1:8080/jsbin/"
+    }
+  }
+}
