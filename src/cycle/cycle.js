@@ -5,12 +5,12 @@ function main(responses) {
     DOM: responses.DOM.select('.field')
       .events('input')
       .map(ev => ev.target.value)
-      .startWith('')
+      .startWith('World!')
       .map(name =>
         h('div', [
           h('label', 'Name:'),
           h('input.field', {attributes: {type: 'text'}}),
-          h('h1', 'Hello ' + name)
+          h('h1', 'Hello, ' + name)
         ])
       )
   };

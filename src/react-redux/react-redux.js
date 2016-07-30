@@ -11,22 +11,19 @@ const counter = (state = 0, action) =>{
     default:
       return state;
   }
-}
+};
 
 /*
  * What does UI look like, assuming it doesn't know
  * about the state or actions, and is a function
  * of the props?
  */
-const Counter = ({
-  value,
-  onIncrement,
-  onDecrement
-  }) => (
+const Counter = (props) => (
   <div>
-    <h1>{value}</h1>
-    <button onClick={onIncrement}>+</button>
-    <button onClick={onDecrement}>-</button>
+    <h1>Hello, World!</h1>
+    <h2>{props.value}</h2>
+    <button onClick={props.onIncrement}>+</button>
+    <button onClick={props.onDecrement}>-</button>
   </div>
 );
 
@@ -38,7 +35,7 @@ const mapStateToProps = (state) =>{
   return {
     value: state
   };
-}
+};
 
 /*
  * Which injected props should be callbacks
