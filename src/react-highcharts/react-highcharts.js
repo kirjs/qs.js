@@ -7,6 +7,9 @@ var Hello = React.createClass({
 });
 
 var config = {
+  title: {
+    text: 'Hello, World!'
+  },
   xAxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   },
