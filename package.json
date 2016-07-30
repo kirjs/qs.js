@@ -8,7 +8,8 @@
     "build": "sh build.sh",
     "update": "sh update.sh",
     "start": "npm run build && http-server ./dist",
-    "e2e": "nightwatch"
+    "e2e": "nightwatch",
+    "deploy": "sh deploy.sh"
   },
   "repository": {
     "type": "git",
