@@ -2,7 +2,7 @@
 var runner = require('../runner');
 var path = require('path');
 
-var allTestFiles = require('glob').sync(path.join('src', '*', 'highcharts.spec.js'));
+var allTestFiles = require('glob').sync(path.join('src', '*', 'mocha-chai.spec.js'));
 
 module.exports = allTestFiles.reduce((result, testPath)=>{
   var framework = testPath.split(path.sep)[1];
