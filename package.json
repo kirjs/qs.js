@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sh build.sh",
+    "update": "sh update.sh",
     "start": "npm run build && http-server ./dist",
     "e2e": "nightwatch"
   },

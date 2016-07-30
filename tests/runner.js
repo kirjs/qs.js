@@ -39,8 +39,8 @@ module.exports = function (test, launcher){
     jsfiddle: function (browser){
       test(jsfiddle(browser, launcher));
     },
-    codepen: function (browser){
-      test(codepen(browser, launcher));
-    }
+   // codepen: function (browser){
+   //   test(codepen(browser, launcher));
+   // }
   };
 };
