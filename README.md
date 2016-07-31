@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kirjs/qs.js.svg?branch=master)](https://travis-ci.org/kirjs/qs.js)
+
 # JS Quick Start
 This is the source for [qs.js.org](http://qs.js.org): a list of JS playgrounds pre-populated for the most populal frameworks 
 and libraries ready to go. 
