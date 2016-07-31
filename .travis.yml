@@ -8,5 +8,5 @@ install:
 before_script:
   - npm start &
 script:
-  - npm run e2e-sc
+  - npm test && npm run e2e-sc
   - pkill node
