@@ -1,9 +1,8 @@
-language: JavaScript
+language: node
 addons:
   sauce_connect: true
 install:
-  - nvm install 4.4.7
-  - npm install -g nightwatch
+  - npm install
 before_script:
   // This is our server
   - npm start &
