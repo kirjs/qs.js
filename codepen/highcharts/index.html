@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS QuickStart: codepen with highcharts</title>
+    <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-70154956-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="../../launch.js"></script>
+    <script src="config.js"></script>
+    <script>
+        function launch(config){
+            launchers[config.playground.key](config.lib);
+        }
+    </script>
+    <link rel="stylesheet" href="../../launcher.css">
+</head>
+<body>
+<a href="https://github.com/kirjs/qs.js"><img style="position: absolute; top: 0; right: 0; border: 0;"
+                                              src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
+                                              alt="Fork me on GitHub"
+                                              data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+<div class="wrapper">
+    <div class="info">
+        <div class="header">
+            <div class="twitter" style="float: right">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://qs.js.org"
+                   data-hashtags="javascript">Tweet</a>
+                <script>!function (d, s, id){
+                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');</script>
+            </div>
+            <h1>
+                <a href="/">&#9664; JS Quick Start</a>
+                <div>Codepen for highcharts </div>
+            </h1>
+        </div>
+        <div class="launcher">
+            <p>Author: Kirill Cherkashin</p>
+            <p>Source: <a href = "https://github.com/kirjs/qs.js/tree/master/src/highcharts">
+                <img src='../../GitHub-Mark-32px.png' alt={alt}/>
+            </a></p>
+            <p>qs.js.org quickstart template for Highcharts</p>
+
+            <button class = "launch" onclick="launch(config)">Start codepen with highcharts</button>
+        </div>
+
+
+    </div>
+
+</div>
+</body>
+<script>
+    if (window.location.search.indexOf('autostart') !== -1) {
+        launch(config);
+    }
+</script>
+</html>

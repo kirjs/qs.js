@@ -1,0 +1,88 @@
+.wrapper {
+    font-family:sans-serif;
+    width: 600px;
+    margin: auto;
+}
+
+.item {
+    padding: 10px;
+    border-bottom: 1px #ddd solid;
+    height: 35px;
+}
+
+.item:nth-child(2n) {
+    background-color: #f9f9f9;
+}
+
+.item  div {
+    display: inline-block;
+}
+
+.item .info {
+    text-transform: capitalize;
+    width: 200px;
+}
+
+.item .framework {
+
+}
+.item .info .author {
+    font-size: 60%;
+    display: block;
+}
+
+.item .playground {
+    width: 100px;
+}
+.item .playground a {
+    text-decoration: underline;
+    color: #888;
+    cursor: pointer;
+}
+.item .playground a:hover {
+    color: #d00;
+}
+
+.item .source  {
+    margin-left: 48px;
+}
+.item .source img {
+    margin-top: 6px;
+    width: 24px;
+    transition: all 1s ease;
+}
+
+.item .playground a:hover {
+    transition: all 1s ease;
+    transform: rotate(-12deg) ;
+}
+
+.item .source img:hover {
+    transform: rotate(40deg);
+    margin-top: 6px;
+    width: 24px;
+}
+
+.item:nth-child(2n) .source img:hover {
+    transform: rotate(-40deg);
+}
+
+
+.item {
+    transition: all 1s ease;
+    margin-left: -10px;
+}
+.loaded .item {
+    transition: all 1s ease;
+    margin-left: 0;
+    background: transparent;
+}
+
+h2 {
+    transition: all 1s ease;
+    margin-left: 10px;
+}
+
+.loaded h2 {
+    margin-left: 0;
+}
