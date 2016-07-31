@@ -11,7 +11,12 @@ mkdir dist
 
 # build
 cp ./site/* ./dist/
+
+if [ "$1" == "--update" ]; then
+  babel-node site-src/update.js
+fi
+
 babel-node site-src/main.js
-cd dist
+
 
 

@@ -42,24 +42,22 @@ libs = libs.filter(lib=>lib.name !== 'angular.js' && !map[lib.name] && (map[lib.
 /**
  * Step3. Fetch the latest versions.
  */
-if (false) {
-  Promise.all(libs.map((lib)=>{
-    return utils.getContent(`https://api.cdnjs.com/libraries?search=${lib.name}&fields=version`);
-  })).then((result)=>{
 
-    var latestVersions = libs.reduce((map, {name}, i)=>{
-      map[name] = result[i].results.filter(n=> n.name === name)[0].version;
-      return map;
-    }, {});
-    console.log(latestVersions);
-// updateTheLibs(libs, latestVersions);
+Promise.all(libs.map((lib)=>{
+  return utils.getContent(`https://api.cdnjs.com/libraries?search=${lib.name}&fields=version`);
+})).then((result)=>{
 
-  }, ()=>{
-    console.log(arguments)
-  }).catch((a)=>{
-    console.log(a)
-  });
-}
+  var latestVersions = libs.reduce((map, {name}, i)=>{
+    map[name] = result[i].results.filter(n=> n.name === name)[0].version;
+    return map;
+  }, {});
+  updateTheLibs(libs, latestVersions);
+
+}, ()=>{
+  console.log(arguments)
+}).catch((a)=>{
+  console.log(a)
+});
 
 
 /**
@@ -84,23 +82,4 @@ function updateTheLibs(libs, latestVersions){
   }, []);
 }
 
-var latestVersion = {
-  rxjs: '4.1.0',
-  'cyclejs-core': '7.0.0',
-  'cyclejs-dom': '10.1.0',
-  normalize: '4.2.0',
-  redux: '3.5.2',
-  'react-redux': '4.4.5',
-  riot: '2.5.0',
-  vue: '1.0.26',
-  c3: '0.4.11',
-  'processing.js': '1.6.0',
-  react: '15.2.1',
-  highcharts: '4.2.5',
-  'react-highcharts': '9.0.0',
-  'tabletop.js': '1.4.3',
-  mocha: '3.0.0-2',
-  chai: '3.5.0'
-};
 
-updateTheLibs(libs, latestVersion);
