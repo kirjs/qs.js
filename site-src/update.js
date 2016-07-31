@@ -3,18 +3,7 @@ var data = getData.read();
 var utils = require('./utils');
 var cloudFlareRegex = /\/\/cdnjs.cloudflare.com\/ajax\/libs\/.+?\/.+?\//g;
 
-var extractLib = function extractLib(html){
-  var libRegex = /\/\/cdnjs.cloudflare.com\/ajax\/libs\/(.+?)\/(.+?)\//;
-  return (html.match(cloudFlareRegex) || []).reduce((libs, lib)=>{
-    const [full, name, version] = lib.match(libRegex);
-    libs.push({name, version});
-    return libs;
-  }, []);
-};
-module.exports = {
-  extractLib
-};
-
+var extractLib = require('./utils').extractLib;
 
 /**
  * Step 1: extract all libs and versions from html
@@ -51,6 +40,8 @@ Promise.all(libs.map((lib)=>{
     map[name] = result[i].results.filter(n=> n.name === name)[0].version;
     return map;
   }, {});
+
+  console.log(latestVersions);
   updateTheLibs(libs, latestVersions);
 
 }, ()=>{

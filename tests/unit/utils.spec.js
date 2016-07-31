@@ -1,4 +1,4 @@
-var update = require('../../site-src/update');
+var update = require('../../site-src/utils');
 var assert = require('assert');
 
 describe('update', () =>{

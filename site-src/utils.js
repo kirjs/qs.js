@@ -7,9 +7,9 @@ var path = require('path');
  */
 function mkdirp(filepath){
   var dir = path.dirname(filepath);
-  if(!fs.existsSync(dir)){
+  if (!fs.existsSync(dir)) {
     mkdirp(dir);
-    fs.mkdirSync( dir)
+    fs.mkdirSync(dir)
   }
 }
 
@@ -21,7 +21,7 @@ function mkdirp(filepath){
  *     are values.
  */
 function writeTo(template, to, replacers){
-  if( replacers ) {
+  if (replacers) {
     template = Object.keys(replacers).reduce((template, key) =>{
       var regex = new RegExp('<%\\s?' + key + '\\s?%>', 'g');
       return template.replace(regex, replacers[key]);
@@ -44,13 +44,12 @@ function copyTo(from, to, replacers){
 }
 
 
-
-function getContent(url) {
+function getContent(url){
   // return new pending promise
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) =>{
     // select http or https module, depending on reqested url
     const lib = url.startsWith('https') ? require('https') : require('http');
-    const request = lib.get(url, (response) => {
+    const request = lib.get(url, (response) =>{
       // handle http errors
       if (response.statusCode < 200 || response.statusCode > 299) {
         reject(new Error('Failed to load page, status code: ' + response.statusCode));
@@ -67,9 +66,20 @@ function getContent(url) {
   })
 }
 
+function extractLib(html){
+  var cloudFlareRegex = /\/\/cdnjs.cloudflare.com\/ajax\/libs\/.+?\/.+?\//g;
+  var libRegex = /\/\/cdnjs.cloudflare.com\/ajax\/libs\/(.+?)\/(.+?)\//;
+  return (html.match(cloudFlareRegex) || []).reduce((libs, lib)=>{
+    const [full, name, version] = lib.match(libRegex);
+    libs.push({name, version});
+    return libs;
+  }, []);
+}
+
 
 module.exports = {
-  copyTo: copyTo,
-  writeTo: writeTo,
-  getContent: getContent
+  extractLib,
+  copyTo,
+  writeTo,
+  getContent
 };
