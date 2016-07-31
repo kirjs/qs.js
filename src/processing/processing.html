@@ -2,30 +2,6 @@
 <html>
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
-
-    <script>
-        function start(callback, config){
-            config = config || {};
-
-            function sketchProc(processing){
-                if (config.globals) {
-                    for (var i in processing) {
-                        if (processing.hasOwnProperty(i) && typeof processing[i] === 'function') {
-                            window[i] = processing[i].bind(processing);
-                        }
-                    }
-                }
-
-                processing.draw = callback;
-                processing.setup = function (){
-                    size(500, 500);
-                }
-            }
-
-            var canvas = document.getElementById("canvas");
-            new Processing(canvas, sketchProc);
-        }
-    </script>
     <meta charset="utf-8">
     <title>Processing.js started with qs.js.org</title>
 </head>
