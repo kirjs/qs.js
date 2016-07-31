@@ -14,7 +14,7 @@ module.exports = {
         browserName: "chrome",
         platform: "OS X 10.11",
         version: "47",
-        build: `build-${TRAVIS_JOB_NUMBER}`,
+        build: 'build-' + TRAVIS_JOB_NUMBER,
         'tunnel-identifier': TRAVIS_JOB_NUMBER,
       },
       "launch_url": "http://127.0.0.1:8080/",
