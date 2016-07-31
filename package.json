@@ -8,7 +8,8 @@
     "build": "sh build.sh",
     "update": "sh update.sh",
     "start": "npm run build && http-server ./dist",
-    "e2e": "nightwatch tests/e2e/e2e-launcher.js -e local",
+    "e2e": "nightwatch tests/e2e/e2e-launcher.js -e local --config nightwatch.js ",
+    "e2e-sc": "nightwatch tests/e2e/e2e-launcher.js -e sauselabs --config nightwatch.js ",
     "deploy": "sh deploy.sh"
   },
   "repository": {
