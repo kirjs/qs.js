@@ -1,17 +1,23 @@
 var getData = require('./getData');
 var data = getData.read();
 var utils = require('./utils');
-var cloudFlareRegex = /\/\/cdnjs.cloudflare.com\/ajax\/libs\/.*?\/.*?\//g;
-var libRegex = /\/\/cdnjs.cloudflare.com\/ajax\/libs\/(.*?)\/(.*?)\//g;
+var cloudFlareRegex = /\/\/cdnjs.cloudflare.com\/ajax\/libs\/.+?\/.+?\//g;
+var libRegex = /\/\/cdnjs.cloudflare.com\/ajax\/libs\/(.+?)\/(.+?)\//g;
 
-
-var libs = data.reduce((libs, group)=>{
-  return group.items.reduce((libs, item)=>{
+module.exports = {
+  extractLib: function extractLib(html){
     return (item.data.html.match(cloudFlareRegex) || []).reduce((libs, lib)=>{
       const [full, name, version] = lib.match(libRegex);
+      console.log(lib, lib, name, version, '*', lib.match(libRegex));
       libs.push({name, version});
       return libs;
     }, libs);
+  }
+};
+
+var libs = data.reduce((libs, group)=>{
+  return group.items.reduce((libs, item)=>{
+
   }, libs)
 }, []);
 
@@ -44,7 +50,7 @@ var latest = {
 };
 
 
-updateTheLibs(libs, latest);
+//updateTheLibs(libs, latest);
 console.log(libs);
 /*
  Promise.all(libs.map((lib)=>{
