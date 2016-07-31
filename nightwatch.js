@@ -16,13 +16,14 @@ module.exports = {
         version: "47",
         build: 'build-' + TRAVIS_JOB_NUMBER,
         'tunnel-identifier': TRAVIS_JOB_NUMBER,
+        "username": "kirjs",
+        "access_key": process.env.SAUCE_ACCESS_KEY,
       },
       "launch_url": "http://127.0.0.1:8080/",
       "selenium_port": 80,
       "selenium_host": "ondemand.saucelabs.com",
       "silent": true,
-      "username": "kirjs",
-      "access_key": process.env.SAUCE_ACCESS_KEY,
+
       "screenshots": {
         "enabled": false,
         "path": ""
