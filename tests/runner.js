@@ -33,9 +33,9 @@ function codepen(browser, launcher){
 
 module.exports = function (test, launcher){
   return {
-    jsbin: function (browser){
-      test(jsbin(browser, launcher));
-    },
+    //jsbin: function (browser){
+    //  test(jsbin(browser, launcher));
+    //},
     jsfiddle: function (browser){
       test(jsfiddle(browser, launcher));
     },
