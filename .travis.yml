@@ -1,0 +1,12 @@
+addons:
+  sauce_connect: true
+install:
+  - nvm install 4.0 // if you're not using Node as language
+  - npm install -g nightwatch
+before_script:
+  // This is our server
+  - npm start &
+script:
+  - nightwatch --config nightwatch.js --env saucelabs
+  // This one feels hacky, but does the job of killing the server
+  - pkill node
