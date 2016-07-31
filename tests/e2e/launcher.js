@@ -6,7 +6,7 @@ var allTestFiles = require('glob').sync(path.join('src', '*', '*.spec.js'));
 
 module.exports = allTestFiles.reduce((result, testPath)=>{
   var framework = testPath.split(path.sep)[1];
-  var tests = runner(require('../../' + testPath), framework);
+  var tests = runner(require(path.join('..','../', testPath)), framework);
 
   for (let test in tests) {
     if (tests.hasOwnProperty(test)) {
