@@ -8,5 +8,5 @@ install:
 before_script:
   - npm start &
 script:
-  - nightwatch --config nightwatch.js --env saucelabs
+  - npm run e2e-sc
   - pkill node
