@@ -4,7 +4,6 @@ addons:
 install:
   - npm install
 before_script:
-  // This is our server
   - npm start &
 script:
   - nightwatch --config nightwatch.js --env saucelabs
