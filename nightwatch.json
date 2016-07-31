@@ -4,8 +4,7 @@
   ],
 
   "test_settings": {
-    "default": {
-      "waitForConditionTimeout": 1000,
+    "local": {
       "launch_url": "http://127.0.0.1:8080/"
     }
   }

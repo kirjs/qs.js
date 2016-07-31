@@ -1,5 +1,5 @@
 "use strict";
-var runner = require('../runner');
+var runner = require('./runner');
 var path = require('path');
 
 var allTestFiles = require('glob').sync(path.join('src', '*', '*.spec.js'));
