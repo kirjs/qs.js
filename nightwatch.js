@@ -1,4 +1,4 @@
-const TRAVIS_JOB_NUMBER = process.env.TRAVIS_JOB_NUMBER
+const TRAVIS_JOB_NUMBER = process.env.TRAVIS_JOB_NUMBER;
 
 module.exports = {
   "src_folders": [
@@ -13,7 +13,7 @@ module.exports = {
       desiredCapabilities: {
         browserName: "chrome",
         platform: "OS X 10.11",
-        version: "47",
+        version: "latest",
         build: 'build-' + TRAVIS_JOB_NUMBER,
         'tunnel-identifier': TRAVIS_JOB_NUMBER,
         "username": "kirjs",
